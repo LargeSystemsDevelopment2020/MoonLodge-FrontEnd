@@ -17,6 +17,7 @@ import java.rmi.RemoteException;
 import java.sql.Date;
 import java.util.List;
 
+@CrossOrigin(maxAge = 3600)
 @RestController
 @RequestMapping("/hotel")
 public class HotelManagerController {
@@ -30,7 +31,7 @@ public class HotelManagerController {
         return "hello";
     }
 
-    @GetMapping("/rooms")
+    @PostMapping("/rooms")
     public List<VacantHotelRoomDTO> getVacantRooms(@RequestBody VacantRoomRequest vacantRoomRequest) throws RemoteException {
         return this.hotelManagerService.getHotelRoomList(vacantRoomRequest.city, vacantRoomRequest.dateFrom, vacantRoomRequest.getDateTo(), vacantRoomRequest.numberGuests, vacantRoomRequest.numberRooms);
     }
