@@ -1,7 +1,3 @@
-### front end baby 
-steps:
+# Frontend
 
-1. clone projektet 
-2. forsøg at kør det 
-3. observer fejl
-4. ????
+This is the old version of frontend
